@@ -42,4 +42,5 @@ jobs:
                   pip install pytest pytest-cov
                   pytest --cov=HW1 tests/
             - name: Coveralls GitHub Action
+              if: success() || failure()
               uses: coverallsapp/github-action@v2.3.0
