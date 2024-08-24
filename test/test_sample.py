@@ -1,5 +1,4 @@
-def func(x):
-    return x + 1
+from ..sample import func
 
 def test_passing():
     assert func(3) == 4
