@@ -9,7 +9,7 @@
 ## unix/macOS:
 
 1. if there is no .venv folder run:\
-   `python3 -m venv .venv`
+   `python3.13 -m venv .venv`
 2. Activate the virtual env:\
    `source .venv/bin/activate`
 3. Confirm activation:\
@@ -17,9 +17,12 @@
    - Should return a path that ends in:\
      `.venv/bin/python`
 4. Prepare pip\
-   `python3 -m pip install --upgrade pip`\
-   `python3 -m pip --version`
+   `python3.13 -m pip install --upgrade pip`\
+   `python3.13 -m pip --version`
 5. Install packages with requirements.txt\
-   `python3 -m pip install -r requirements.txt`
+   `python3.13 -m pip install -r requirements.txt`
 6. More info here:\
    [Install packages in a virtual environment using pip and venv](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
+
+7. To deactivate the virtual environment:\
+   `deactivate`
