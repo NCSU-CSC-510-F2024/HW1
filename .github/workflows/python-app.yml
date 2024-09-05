@@ -36,6 +36,10 @@ jobs:
               run: |
                   pip install bandit
                   bandit -r HW2/
+            - name: Execute Pylint
+              run: |
+                  pip install pylint
+                  pylint HW2/
             - name: Test with pytest
               run: |
                   pip install pytest pytest-cov
