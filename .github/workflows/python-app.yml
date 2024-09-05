@@ -42,6 +42,7 @@ jobs:
 
                   jobs:
     test:
+        needs: lint
         runs-on: ubuntu-latest
 
         steps:
