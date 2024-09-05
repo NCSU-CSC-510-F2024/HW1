@@ -42,6 +42,7 @@ jobs:
 
                   jobs:
     test:
+        if: always()
         needs: lint
         runs-on: ubuntu-latest
 
