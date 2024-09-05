@@ -1,4 +1,4 @@
-import rand
+from . import rand
 
 
 def mergeSort(arr):
