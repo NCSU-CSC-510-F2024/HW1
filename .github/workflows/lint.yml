@@ -29,11 +29,13 @@ jobs:
               run: |
                   pip install autopep8
                   autopep8 --in-place --aggressive --aggressive -r HW2/
-            - name: Execute Bandit
-              run: |
-                  pip install bandit
-                  bandit -r HW2/
             - name: Execute Pylint
+              if: success() || failure()
               run: |
                   pip install pylint
                   pylint HW2/
+            - name: Execute Bandit
+              if: success() || failure()
+              run: |
+                  pip install bandit
+                  bandit -r HW2/
