@@ -1,6 +1,7 @@
 """Generate an array of random numbers"""
 import subprocess
 
+
 def random_array(arr):
     """Fill an array with random numbers."""
     shuffled_num = None
