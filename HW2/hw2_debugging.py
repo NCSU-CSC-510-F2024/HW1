@@ -1,5 +1,5 @@
 """Merge Sort"""
-import rand
+from .import rand
 
 def merge_sort(arr):
     """It uses the divide and conquer approach to sort the given list."""
