@@ -3,6 +3,7 @@
 ![License](https://img.shields.io/github/license/NCSU-CSC-510-F2024/HW1.svg)
 ![Tests](https://github.com/NCSU-CSC-510-F2024/HW1/actions/workflows/python-app.yml/badge.svg?event=push)
 [![Coverage Status](https://coveralls.io/repos/github/NCSU-CSC-510-F2024/HW1/badge.svg?branch=main)](https://coveralls.io/github/NCSU-CSC-510-F2024/HW1?branch=main)
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
 
 # For Virtual Environment Setup
 
