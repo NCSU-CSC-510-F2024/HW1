@@ -7,7 +7,7 @@
 [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 [![style: autopep8](https://img.shields.io/badge/code%20style-autopep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
-# For Virtual Environment Setup  
+# For Virtual Environment Setup
 
 ## unix/macOS:
 
@@ -17,8 +17,8 @@
    `source .venv/bin/activate`
 3. Confirm activation:\
    `which python`
-   - Should return a path that ends in:\
-     `.venv/bin/python`
+    - Should return a path that ends in:\
+      `.venv/bin/python`
 4. Prepare pip\
    `python3.13 -m pip install --upgrade pip`\
    `python3.13 -m pip --version`
