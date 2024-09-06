@@ -61,7 +61,10 @@ jobs:
               run: |
                   pip install pytest pytest-cov
                   pytest --cov=Homework hw1/tests/ hw2/tests/
+                  coverage xml
 
             - name: Coveralls GitHub Action
               if: success() || failure()
               uses: coverallsapp/github-action@v2.3.0
+              with:
+                  format: cobertura
