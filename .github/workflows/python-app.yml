@@ -28,17 +28,17 @@ jobs:
             - name: Execute AutoPep8
               run: |
                   pip install autopep8
-                  autopep8 --in-place --aggressive --aggressive -r hw2
+                  autopep8 --in-place -r hw2
             - name: Execute Pylint
               if: success() || failure()
               run: |
                   pip install pylint
-                  pylint HW2/
+                  pylint hw2
             - name: Execute Bandit
               if: success() || failure()
               run: |
                   pip install bandit
-                  bandit -r HW2/
+                  bandit -r hw2
 
                   jobs:
     test:
@@ -61,7 +61,7 @@ jobs:
             - name: Test with pytest
               run: |
                   pip install pytest pytest-cov
-                  pytest --cov=Homework HW1/tests/ HW2/tests/
+                  pytest --cov=Homework hw1/tests/ hw2/tests/
 
             - name: Coveralls GitHub Action
               if: success() || failure()
