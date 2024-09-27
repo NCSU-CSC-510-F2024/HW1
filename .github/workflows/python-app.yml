@@ -34,7 +34,7 @@ jobs:
             - name: Execute AutoPep8
               run: |
                   pip install autopep8
-                  autopep8 --in-place -r hw2
+                  autopep8 --in-place -r ./hw2
 
     PyLint:
         runs-on: ubuntu-latest
@@ -45,7 +45,7 @@ jobs:
               if: success() || failure()
               run: |
                   pip install pylint
-                  pylint hw2
+                  pylint ./hw2
 
     Bandit:
         runs-on: ubuntu-latest
