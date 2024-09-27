@@ -1,6 +1,7 @@
 """Merge Sort"""
 from . import rand
 
+
 def merge_sort(arr):
     """It uses the divide and conquer approach to sort the given list."""
     if len(arr) <= 1:
@@ -9,6 +10,7 @@ def merge_sort(arr):
     half = len(arr) // 2
 
     return recombine(merge_sort(arr[:half]), merge_sort(arr[half:]))
+
 
 def recombine(left_arr, right_arr):
     """Mergin left and right array into one sorted array."""
@@ -31,6 +33,7 @@ def recombine(left_arr, right_arr):
         left_index += 1
 
     return merge_arr
+
 
 current_arr = rand.random_array([None] * 20)
 arr_out = merge_sort(current_arr)

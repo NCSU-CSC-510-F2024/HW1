@@ -1,5 +1,6 @@
 """Selection Sort"""
 
+
 def selection_sort(arr):
     """
         It selects the minimum number from the list and place it into its right place.
