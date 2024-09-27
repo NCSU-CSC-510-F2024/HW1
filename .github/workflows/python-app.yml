@@ -25,13 +25,13 @@ jobs:
 
                   # Checks if requirements.txt already exists, then creates it if it doesn't
                   if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-            
+
     autopep8:
         runs-on: ubuntu-latest
-        requires: build
+        needs: build
 
         steps:
-              - name: Execute AutoPep8
+            - name: Execute AutoPep8
               run: |
                   pip install autopep8
                   autopep8 --in-place -r hw2
