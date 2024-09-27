@@ -1,4 +1,4 @@
-name: Run Linters and Tests
+name: Get coverage report
 
 on:
     push:
