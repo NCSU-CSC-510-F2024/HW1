@@ -56,4 +56,4 @@ jobs:
               if: success() || failure()
               run: |
                   pip install bandit
-                  bandit -c bandit.yaml -r .
+                  bandit -r .
