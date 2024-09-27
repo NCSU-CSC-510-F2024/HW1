@@ -1,0 +1,37 @@
+name: Run Linters and Tests
+
+on:
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
+
+permissions:
+    contents: write
+
+jobs:
+    coverage:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: '3.13.0-rc.1'
+            - name: Install dependencies
+              run: |
+                  python -m pip install --upgrade pip
+
+                  # Checks if requirements.txt already exists, then creates it if it doesn't
+                  if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            - name: Test with pytest
+              run: |
+                  pip install pytest pytest-cov
+                  pytest --cov=Homework hw1/tests/ hw2/tests/
+                  coverage xml
+            - name: Coveralls GitHub Action
+              if: success() || failure()
+              uses: coverallsapp/github-action@v2.3.0
+              with:
+                  format: cobertura
