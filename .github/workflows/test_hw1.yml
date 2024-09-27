@@ -10,36 +10,6 @@ permissions:
     contents: write
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-
-        steps:
-            - uses: actions/checkout@v4
-            - name: Set up Python
-              uses: actions/setup-python@v5
-              with:
-                  python-version: '3.13.0-rc.1'
-            - name: Install dependencies
-              run: |
-                  python -m pip install --upgrade pip
-
-                  # Checks if requirements.txt already exists, then creates it if it doesn't
-                  if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-            - name: Execute AutoPep8
-              run: |
-                  pip install autopep8
-                  autopep8 --in-place -r hw2
-            - name: Execute Pylint
-              if: success() || failure()
-              run: |
-                  pip install pylint
-                  pylint hw2
-            - name: Execute Bandit
-              if: success() || failure()
-              run: |
-                  pip install bandit
-                  bandit -c .github/config_files/bandit.yaml -r .
-
     test_hw1:
         runs-on: ubuntu-latest
 
