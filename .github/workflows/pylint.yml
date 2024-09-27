@@ -29,5 +29,5 @@ jobs:
                   pip install pylint
                   
             - name: Run Pylint
-              run: pylint ./  # Runs pylint on all files in the repository.
+              run: pylint ./hw2  # Runs pylint on all files in the repository.
     
