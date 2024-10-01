@@ -6,4 +6,4 @@
 
 # echo ""
 
-gawk -F, '$3 == 2 { print }' titanic.csv | sed -e 's/female/F/g' -e 's/male/M/g' | gawk -F, 'BEGIN { sum=0; count=0 } $7 != "" && $7 ~ /^[0-9]+(\.[0-9]+)?$/ { sum += $7; count++ } END { if (count > 0) print "Average age: " sum/count; else print "Average age could not be computed" }'
+gawk -F, '$3 == 2 { print }' titanic.csv | tee /dev/tty | sed -e 's/female/F/g' -e 's/male/M/g' | tee /dev/tty | gawk -F, 'BEGIN { sum=0; count=0 } $7 != "" && $7 ~ /^[0-9]+(\.[0-9]+)?$/ { sum += $7; count++ } END { if (count > 0) print "Average age: " sum/count; else print "Average age could not be computed" }'
